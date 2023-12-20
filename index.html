@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Te invito a festejar Mis Quince años - CAMILA</title>
+  </head>
+  <body>
+    <audio id="miAudio" class="d-none" controls>
+      <source src="./music/Titanium (Instrumental) (192 kbps).mp3"
+        type="audio/mpeg">
+    </audio>
+    <div id="modal-principal" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content modal-principal">
+          <div class="modal-body">
+            <h2 style="color:green;">Bienvenidos a Mis Quince CAMI</h2>
+            <div class="botones-modal">
+              <button id="boton-play" class="btn-rosa my-2" >Ingresa</button>
+              <!-- <button id="boton-cerrar" class="btn-rosa my-2">Ingresar sin música</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="hero">
+      <div class="hero--capa"></div>
+      <div class="hero--presentacion">
+        <div class="hero--fecha">
+          <img src="./img/klipartz.com.png" width="40px">
+          <p style="color: blue;">22-01-2024</p>
+        </div>
+        <div class="hero--titulo">
+          <h1 style="color: blue;">CAMI</h1>
+          <h4 style="color: blue;" >Mis 15 años</h4>
+          <div class="linea"></div>
+        </div>
+        <div class="hero--frase">
+          <img src="./img/doble-comillas.png" width="50px"
+            style="transform: rotate(180deg);">
+          <!-- <p>
+            En este cuento de hadas, hoy me toca a mí sentirme como una
+            princesa... te espero para que seas parte de este cuento feliz,
+            inolvidable y mágico.
+          </p> -->
+          <img src="./img/doble-comillas.png" width="50px">
+        </div>
+        <div class="hero--flecha">
+          <img src="./img/boton-de-expansion.png" width="60px">
+        </div>
+      </div>
+    </section>
+    <section  class="cuenta-regresiva">
+        <div class="cuenta-regresiva--aros animate">
+          <div class="cuenta-regresiva--aros circulo">
+            <h6>Faltan</h6>
+            <div class="cuenta-regresiva--aros reloj">
+              <div class="d-flex flex-column text-center border-end fs-3 w-25">
+                <span class="numero dias">12</span>
+                <span class="texto">días</span>
+              </div>
+              <div class="d-flex flex-column text-center border-end fs-3 w-25">
+                <span class="numero horas">03</span>
+                <span class="texto">hs</span>
+              </div>
+              <div class="d-flex flex-column text-center border-end fs-3 w-25">
+                <span class="numero minutos">45</span>
+                <span class="texto">min</span>
+              </div>
+              <div class="d-flex flex-column text-center fs-3 w-25">
+                <span class="numero segundos">56</span>
+                <span class="texto">seg</span>
+              </div>
+            </div>
+            <div class="cuenta-regresiva--flor">
+              <img src="./img/flor-verde.png" width="30px">
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="fiesta">
+      <div class="fiesta--aros animate">
+        <div class="fiesta--circulo">
+          <img src="./img/papel-picado.png" width="100px">
+        </div>
+      </div>
+      <div class="fiesta--titulo animate">
+        <img src="./img/cinta.svg" width="16px"
+          style="transform: rotate(180deg);">
+        <h3 class="text-center my-4">Fiesta</h3>
+        <img src="./img/cinta.svg" width="16px">
+      </div>
+      <div class="fiesta--info animate">
+        <h5>Día</h5>
+        <p>22 de enero 7:00 pm</p>
+       
+      </div>
+      <div class="fiesta--info animate">
+        <h5>Lugar</h5>
+        <p>Salón <br>(Club Las Lomitas)</p>
+        <button class="btn-rosa" data-bs-toggle="modal"
+          data-bs-target="#modalAsistencia">CONFIRMAR ASISTENCIA</button>
+        <!-- modal confirmar asistencia -->
+        <div class="modal fade" id="modalAsistencia" tabindex="-1"
+          aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0 d-flex flex-column ">
+                <img src="./img/papel-picado-rosa.png" width="50px">
+                <h1 class="modal-title fs-5">Confirmar Asistencia</h1>
+              </div>
+              <div class="modal-body">
+                <form id="form-asistencia">
+                  <div
+                    class="form-group d-flex justify-content-center mb-3 mt-2">
+                    <div class="form-check mx-1">
+                      <input class="form-check-input" type="radio"
+                        name="confirmo" id="inputSi" value="si" checked>
+                      <label class="form-check-label" for="inputSi">
+                        Si, confirmo!
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input mx-1" type="radio"
+                        name="confirmo" id="inputNo" value="no">
+                      <label class="form-check-label" for="inputNo">
+                        No puedo
+                      </label>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <input type="text"
+                      class="form-control input-nombre text-center"
+                      id="recipient-name"
+                      placeholder="Ingrese su nombre completo">
+                  </div>
+                  <div class="mb-3">
+                    <textarea class="form-control text-detalle text-center"
+                      id="message-text" rows="2" cols="50" maxlength="250"
+                      placeholder="Ingrese algun dato importante. Ej: soy vegetariano"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer d-flex justify-content-center border-0">
+                <button type="button" id='enviar' class="btn-rosa">Enviar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fiesta--info animate">
+        <h5>Dirección</h5>
+        <p>calle</p>
+        <button class="btn-rosa" data-bs-toggle="modal"
+          data-bs-target="#modalMapa">COMO LLEGAR?</button>
+        <div class="modal" tabindex="-1" role="dialog" id="modalMapa">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header border-0 d-flex flex-column ">
+                <img src="./img/ubicacion.png" width="50px">
+                <h1 class="modal-title fs-5 ">Lugar de la Fiesta</h1>
+              </div>
+              <div class="modal-body">
+                <div style="width: 100%"><iframe width="100%" height="400"
+                    frameborder="0" scrolling="no" marginheight="0"
+                    marginwidth="0"
+                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=C.Jorge%20luis%20borges%203091,%20yerba%20buena,%20tucuman+(Club%20las%20lomitas)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                      href="https://www.gps.ie/car-satnav-gps/">Car GPS</a></iframe></div>
+              </div>
+              <div class="modal-footer d-flex justify-content-center border-0">
+                <button type="button" data-bs-dismiss="modal" class="btn-rosa">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="galeria">
+      <h2 class="animate">Un breve recorrido de estos años</h2>
+      <img class="animate" src="./img/camara.png" width="40px">
+      <div class="marco-carrusel ">
+        <div id="carouselExampleAutoplaying" class="carousel slide"
+          data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="foto-carrusel"
+                style="background-image: url(./img/carrusel/cami7.jpg);">.</div>
+            </div>
+            <div class="carousel-item">
+              <div class="foto-carrusel"
+                style="background-image: url(./img/carrousel/cami7.jpg);">.</div>
+            </div>
+            <div class="carousel-item">
+              <div class="foto-carrusel"
+                style="background-image: url(./img/carrousel/cami7.jpg);">.</div>
+            </div>
+            <div class="carousel-item">
+              <div class="foto-carrusel"
+                style="background-image: url(./img/carrousel/cami7.jpg);">.</div>
+            </div>
+            <div class="carousel-item">
+              <div class="foto-carrusel"
+                style="background-image: url(./img/carrousel/cami7.jpg);">.</div>
+            </div>
+            <div class="carousel-item">
+              <div class="foto-carrusel"
+                style="background-image: url(./img/carrousel/cami7.jpg);">.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="info">
+      <div class="card animate">
+        <div class="card-body">
+          <h5 class="card-title">Música</h5>
+          <img src="./img/musica.png" width="50px">
+          <p class="card-text">
+            ¿Cuál es la canción que no debe faltar en la PlayList de la fiesta?</p>
+          <button class="btn-rosa" data-bs-toggle="modal"
+          data-bs-target="#modalSugerencia">SUGERIR CANCION</button>
+        <!-- modal confirmar asistencia -->
+        <div class="modal fade" id="modalSugerencia" tabindex="-1"
+          aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0 d-flex flex-column ">
+                <img src="./img/musica.png" width="50px">
+                <h1 class="modal-title fs-5">Sugerir cancion</h1>
+              </div>
+              <div class="modal-body">
+                <form id="form-musica">
+                  <div class="mb-3">
+                    <input type="text"
+                      class="form-control input-nombre text-center"
+                      id="nombre"
+                      placeholder="Tu nombre" 
+                      style="width:90%!important">
+                  </div>
+                  <div class="mb-3">
+                    <input type="text"
+                      class="form-control input-nombre text-center"
+                      id="cancion"
+                      placeholder="Nombre de la cancion y el autor"
+                      style="width:90%!important">
+                  </div>
+                  <div class="mb-3">
+                    <input type="text"
+                      class="form-control input-nombre text-center"
+                      id="link"
+                      placeholder="Si deseas ingresar el link"
+                      style="width:95%!important">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer d-flex justify-content-center border-0">
+                <button type="button" id='enviarCancion' class="btn-rosa">Enviar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="card animate">
+        <div class="card-body">
+          <h5 class="card-title">Dress Code</h5>
+          <img src="./img/dress-code.png" class="my-4" width="50px">
+          <h5 class="card-text my-4">ELEGANTE</h5>
+        </div>
+      </div>
+    </section>    
+        <footer>
+      
+
+    </footer>
+    <div id="controlMusica">
+      <button id='botonPause' class="btn-music"><img
+          src="./img/nota-musical.png" width="100%"></button>
+    </div>
+    <script src="app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
